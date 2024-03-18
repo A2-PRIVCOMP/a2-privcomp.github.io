@@ -1,0 +1,24 @@
+---
+import ContentSection from "~/components/content-section.astro";
+
+const deliverables = [
+  {
+    name: "Deliverable 1",
+    data: "2024",
+    link: "/pdfs/deliverables/deliverable1.pdf",
+  }
+]
+---
+
+<ContentSection title="Deliverables" id="deliverables">
+    <div class="sm:w-3/4 lg:w-3/4 mx-auto">
+        {deliverables.map((publicacion, index) => (
+          <div class="mb-4 text-left">
+            <h4 class="gradient-text mt-0"><b>{publicacion.name}</b></h4>
+            <p>{publicacion.data}</p>
+  
+            Descarga: <a  href={publicacion.link} class="text-blue-500" download>PDF</a>
+          </div>
+        ))}
+      </div>
+</ContentSection>

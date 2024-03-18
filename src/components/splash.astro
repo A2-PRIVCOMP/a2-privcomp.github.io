@@ -1,0 +1,91 @@
+---
+import { Image } from "astro:assets";
+import astronautImage from "~/assets/ministerio_transformacion.png";
+import euImage from "~/assets/EU.jpg";
+import prtrImage from "~/assets/PRTR.svg";
+---
+
+<section class="relative h-full gradient-background">
+
+
+  <div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40">
+
+  </div>
+  <div class="relative grid h-full place-items-center sm:grid-cols-1">
+    <h2
+      class="flex flex-col items-center sm:justify-self-center"
+    >
+      <div
+        class="gradient-text text-center font-extrabold tracking-tighter text-8xl"
+      >
+        A2-PRIVCOMP
+
+      </div>
+      <div class="gradient-text text-center tracking-tighter text-xl"> 
+        <b>A</b>prendizaje <b>A</b>utomático con Restricciones de <b>PRIV</b>acidad para <b>COMP</b>putación en la Frontera
+      </div>
+
+      <div class="relative grid gap-4 place-items-center sm:grid-cols-3 mt-20 mx-auto max-w-screen-xl">
+        <div class="flex flex-col">
+          <Image
+            src={astronautImage}
+            alt="Astronaut floating in space"
+            style="height: 100px; width: auto;"
+          />
+        </div>
+        <div class="flex flex-col">
+          <Image
+            src={euImage}
+            alt="Astronaut floating in space"
+            style="height: 100px; width: auto;"
+          />
+        </div>
+        <div class="flex flex-col">
+          <Image
+            src={prtrImage}
+            alt="Astronaut floating in space"
+            style="height: 100px; width: auto;"
+          />
+        </div>
+      </div>
+    </h2>
+  </div>
+</section>
+
+<noscript>
+  <style>
+    #splash-bg-fallback {
+      display: block;
+    }
+  </style>
+</noscript>
+
+<style>
+  @keyframes float {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+      transform: translate3d(0, 30px, 0);
+    }
+  }
+
+  #astronaut {
+    animation: float linear 2.5s infinite alternate;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #astronaut {
+      @apply animate-none;
+    }
+
+    :global(#starfield) {
+      @apply hidden;
+    }
+
+    #splash-bg-fallback {
+      @apply block;
+    }
+  }
+</style>

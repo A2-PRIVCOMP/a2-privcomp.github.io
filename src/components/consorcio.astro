@@ -1,0 +1,53 @@
+---
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import ContentSection from "~/components/content-section.astro";
+import uc3m from "~/assets/uc3m.png";
+import LSTech from "~/assets/LSTech.webp";
+import vicomtech from "~/assets/vicomtech.svg";
+import nec from "~/assets/nec_logo.svg";
+---
+
+<ContentSection title="Consorcio" id="consorcio">
+  <h3 class="gradient-text mt-0"><b>Coordinación:</b></h3>
+
+  <div style="margin: 0;">
+    <a href="https://uc3m.es">
+    <Image
+    src={uc3m}
+        style="margin: 0"
+        alt="Astronaut floating in space"
+        />
+      </a>
+    </div>
+    <h3 class="gradient-text my-0 py-0"><b>Subcontratados:</b></h3>
+    <div class="relative grid gap-4 place-items-center sm:grid-cols-3 mx-auto max-w-screen-xl">
+    <div class="flex flex-col">
+      <a href="https://www.lstech.io">
+      <Image
+        src={LSTech}
+        alt="Astronaut floating in space"
+        style="height: 200px; width: auto;"
+      />
+      </a>
+    </div>
+    <div class="flex flex-col">
+      <a href="https://www.vicomtech.org">
+        <Image
+        src={vicomtech}
+        alt="Astronaut floating in space"
+        style="height: 200px; width: auto;"
+        />
+      </a>
+    </div>
+    <div class="flex flex-col">
+      <a href="https://es.nec.com">
+        <Image
+        src={nec}
+        alt="Astronaut floating in space"
+        style="height: 80px; width: auto;"
+        />
+      </a>
+    </div>
+    </div>  
+</ContentSection>
