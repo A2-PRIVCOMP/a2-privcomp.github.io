@@ -17,6 +17,11 @@ const links: Array<FooterLink> = [
     url: "https://www.linkedin.com/groups/13004206/",
     description: "A2-PRIVCOMP en LinkedIn",
     icon: "fa-brands:linkedin-in",
+  },
+  {
+    url: "https://github.com/A2-PRIVCOMP",
+    description: "A2-PRIVCOMP en Github",
+    icon: "fa-brands:github",
   }
 ];
 ---
@@ -25,7 +30,7 @@ const links: Array<FooterLink> = [
   <div class="absolute inset-0 overflow-hidden gradient-background">
 
   </div>
-  <ul class="relative grid grid-cols-3 gap-10">
+  <ul class="relative grid grid-cols-2 gap-10 sm:grid-cols-4">
     {
       links.map((link) => (
         <li>
