@@ -3,21 +3,16 @@ import ContentSection from "~/components/content-section.astro";
 
 const publicaciones = [
   {
-    name: "Publicación 1",
-    authors: "Author 1, Author 2",
-    data: "2021",
-    abstract: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra ante quis tincidunt varius. Morbi scelerisque posuere vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam aliquam ultricies massa, finibus accumsan metus pulvinar eget. Maecenas elementum augue ac vehicula ultrices. Sed placerat finibus elementum. Praesent nec ante id leo maximus venenatis. Aenean sit amet lorem ultrices, malesuada dolor in, tristique erat."
-  },
-  {
-    name: "Publicación 2",
-    authors: "Author 1, Author 2",
-    data: "2021",
-    abstract: "Morbi porta lacus accumsan ex rhoncus hendrerit. Mauris elementum at purus id imperdiet. Nullam a odio placerat turpis porta bibendum sit amet sit amet orci. Donec ex mauris, fringilla ac porta nec, maximus et mauris. Nunc ipsum mauris, sollicitudin vitae mattis vel, dictum quis eros. Pellentesque volutpat sed quam convallis venenatis. Duis orci lacus, condimentum vel semper ac, mattis lobortis elit. Phasellus lobortis varius augue, sit amet viverra libero vulputate et. Nunc hendrerit fringilla sagittis."
+    name: "",
+    authors: "",
+    data: "",
+    abstract: ""
   }
 ]
 ---
 
 <ContentSection title="Publicaciones" id="publicaciones">
+  <span>Aquí se mostrarán las publicaciones asociadas al proyecto.</span>
   <div class="sm:w-3/4 lg:w-3/4 mx-auto">
     {publicaciones.map((publicacion, index) => (
       <div class="mb-4 text-left">
