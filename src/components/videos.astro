@@ -1,0 +1,49 @@
+---
+import ContentSection from "~/components/content-section.astro";
+
+const deliverables = [
+  {
+    title: "Entregable 10",
+    thumbnail: "/thumbnails/E10.png",
+    link: "",
+  },
+  {
+    title: "Entregable 12",
+    thumbnail: "/thumbnails/E12.png",
+    link: "",
+  },
+    {
+    title: "Entregable 13",
+    thumbnail: "/thumbnails/E13.png",
+    link: "",
+  },
+    {
+    title: "Workshop",
+    thumbnail: "/thumbnails/Workshop.png",
+    link: "",
+  }
+]
+---
+
+<ContentSection title="Vídeos de Diseminación" id="diseminacion">
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+    {deliverables.map((item) => (
+      <a
+        href={item.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="block rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition"
+      >
+        <img
+          src={item.thumbnail}
+          alt={item.title}
+          class="w-full h-48 object-cover"
+        />
+        <div class="p-3 bg-white dark:bg-gray-900">
+          <h4 class="text-lg font-semibold gradient-text">{item.title}</h4>
+        </div>
+      </a>
+    ))}
+  </div>
+</ContentSection>

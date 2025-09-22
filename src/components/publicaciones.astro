@@ -3,25 +3,78 @@ import ContentSection from "~/components/content-section.astro";
 
 const publicaciones = [
   {
-    name: "",
+    authors: "Ángel Merino, José González-Cabañas, Ángel Cuevas, and Rubén Cuevas.",
+    title: "Poster: Analysis of User Uniqueness on LinkedIn Based on Publicly Available Non-PII. In Proceedings of the 2023 ACM on Internet Measurement Conference (IMC '23). Association for Computing Machinery, New York, NY, USA, 726–727. ",
+    doi: "https://doi.org/10.1145/3618257.3625000",
+    open_link: "https://e-archivo.uc3m.es/rest/api/core/bitstreams/27926de0-b78f-4866-828b-944fe493639d/content "
+  },
+  {
+    authors: "Amir  Mehrjoo, Rubén  Cuevas, Ángel  Cuevas.",
+    title: "Online advertisement in a pink-colored market. EPJ Data Sci. 13 (1) 36 (2024)",
+    doi: "https://doi.org/10.1140/epjds/s13688-024-00473-2",
+    open_link: "https://link.springer.com/content/pdf/10.1140/epjds/s13688-024-00473-2 "
+  },
+  {
+    authors: "Ángel Merino, José González-Cabañas, Ángel Cuevas, and Rubén Cuevas.",
+    title: "2024. Analysis and Implementation of Nanotargeting on LinkedIn Based on Publicly Available Non-PII. In Proceedings of the 2024 CHI Conference on Human Factors in Computing Systems (CHI '24). Association for Computing Machinery, New York, NY, USA, Article 1019, 1–22",
+    doi: "https://doi.org/10.1145/3613904.3642107",
+    open_link: "https://arxiv.org/pdf/2310.10155"
+  },
+  {
+    authors: "Francisco Caravaca.",
+    title: "Measuring Energy Consumption of LLMs Inferences. ACM Sigmetrics 2025. Student Research Competition. Association for Computing Machinery, New York, NY, USA",
+    doi: "",
+    open_link: "https://www.it.uc3m.es/fcaravac/Measuring_Energy_Consumption_of_LLMs_Inferences.pdf"
+  },
+  {
+    authors: "Ángel Merino, Ángel Cuevas, Rubén Cuevas,",
+    title: "KPN-anonymity: Extension of K-anonymity for user anonymity evaluation on web applications, Elsevier Array, Volume 27, 2025, 100499.ISSN 2590-0056,",
+    doi: "https://doi.org/10.1016/j.array.2025.100499",
+    open_link: "https://tinyurl.com/4y6nyy6a "
+  },
+  {
+    authors: "P. A. Osorio-Marulanda, G. Epelde, M. Hernandez, I. Isasa, N. M. Reyes and A. B. Iraola, ",
+    title: '"Privacy Mechanisms and Evaluation Metrics for Synthetic Data Generation: A Systematic Review," in IEEE Access, vol. 12, pp. 88048-88074, 2024,',
+    doi: "https://10.0.4.85/ACCESS.2024.3417608",
+    open_link: "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10568134"
+  },
+  {
+    authors: "P. A. Osorio-Marulanda, J. E. C. Ramirez, M. H. Jiménez, N. M. Reyes and G. E. Unanue,",
+    title: '"Differentially Private Non Parametric Copulas: Generating Synthetic Data with Non Parametric Copulas Under Privacy Guarantees," 2025 IEEE 38th International Symposium on Computer-Based Medical Systems (CBMS), Madrid, Spain, 2025, pp. 441-448',
+    doi: "https://doi.org/10.1109/CBMS65348.2025.00094",
+    open_link: "https://arxiv.org/abs/2409.18611"
+  },
+  {
+    authors: "Hernandez Mikel , Osorio-Marulanda Pablo A. , Catalina Mikel , Loinaz Lorea , Epelde Gorka , Aginako Naiara.",
+    title: "Comprehensive evaluation framework for synthetic tabular data in health: fidelity, utility and privacy analysis of generative models with and without privacy guarantees. Frontiers in Digital Health. Volume 7 - 2025",
+    doi: "https://doi.org/10.3389/fdgth.2025.1576290",
+    open_link: "https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2025.1576290/pdf"
+  },
+  {
+    authors: "Jaime Fuster, Roberto González, Giuseppe Siracusano, Davide Sanvito, Roberto Bifulco.",
+    title: "Design of a GenAI-Powered Platform for Cyber Design of a GenAI-Powered Platform for Cyber.  Actas X Jornadas Nacionales de Investigación en Ciberseguridad (JNIC 2025). Zaragoza. España",
+    doi: "",
+    open_link: "https://drive.google.com/file/d/1dRIn1-VTiaga2PStzTcvvDcw0bDCS2Ux/view"
+  },
+  {
     authors: "",
-    data: "",
-    abstract: ""
+    title: "Workshop final con la participación de todas las entidades participantes en el proyecto para la presentación y puesta en común de los resultados alcanzados. UC3M NEC VICOMTECH LSTECH",
+    doi: "",
+    open_link: ""
   }
 ]
 ---
 
 <ContentSection title="Publicaciones" id="publicaciones">
-  <span>Aquí se mostrarán las publicaciones asociadas al proyecto.</span>
   <div class="sm:w-3/4 lg:w-3/4 mx-auto">
     {publicaciones.map((publicacion, index) => (
       <div class="mb-4 text-left">
-        <h4 class="gradient-text mt-0"><b>{publicacion.name}</b></h4>
-        <p>{publicacion.authors}</p>
-        <p>{publicacion.data}</p>
-        <div class="mt-2">
-            {publicacion.abstract}
-        </div>
+        <span class="gradient-text mt-0"><b>A{index+1}. {publicacion.authors}</b></span>
+        <span>{publicacion.title}</span>
+        
+        {publicacion.doi && (<p>DOI: <a href={publicacion.doi}>{publicacion.doi}</a></p>)}
+        {publicacion.open_link && (<p>Enlace Abierto: <a href={publicacion.doi}>{publicacion.open_link}</a></p>)}
+
       </div>
     ))}
   </div>
