@@ -73,7 +73,7 @@ const publicaciones = [
         <span>{publicacion.title}</span>
         
         {publicacion.doi && (<p>DOI: <a href={publicacion.doi}>{publicacion.doi}</a></p>)}
-        {publicacion.open_link && (<p>Enlace Abierto: <a href={publicacion.doi}>{publicacion.open_link}</a></p>)}
+        {publicacion.open_link && (<p>Enlace Abierto: <a href={publicacion.open_link}>{publicacion.open_link}</a></p>)}
 
       </div>
     ))}
